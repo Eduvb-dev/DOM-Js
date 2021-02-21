@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: "Press Start 2P", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  font-weight: 400;
+  height: 100vh;
+  background: linear-gradient(#b07d62, #774936);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  position: relative;
+  width: 120rem;
+  height: 65rem;
+  background-color: rgba(237, 196, 179, 0.4);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  display: flex;
+  border: 5px solid #774936;
+  border-radius: 40px;
+}
+
+/* Botones */
+.button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+  background-color: #e6debd;
+  backdrop-filter: blur(10px);
+  padding: 0.7rem 2.5rem;
+  border: 5px solid #774936;
+  border-radius: 40px 0px 40px 0px;
+  box-shadow: 0 1.75rem 3.5rem rgba(138, 90, 68, 0.1);
+}
+
+.insert {
+  top: 38.3rem;
+}
+.play {
+  top: 45.1rem;
+}
+.record {
+  top: 50.9rem;
+}
+.finish {
+  top: 56.7rem;
+}
+/* Animación de boton*/
+.button:active {
+  transform: translate(-50%, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+.button:focus {
+  outline: none;
+}
+.noButton {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+/* Cabezera y columnas de juego*/
+.head {
+  position: absolute;
+  font-size: large;
+  text-align: center;
+  left: 50%;
+  top: 5rem;
+  transform: translateX(-50%);
+  height: 10rem;
+  border-radius: 50rem;
+  background-color: #e6debd;
+  padding: 1.5rem 2.5rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(138, 90, 68, 0.1);
+  border: 5px solid #774936;
+  border-radius: 40px 0px 40px 0px;
+  overflow: hidden;
+}
+#row1,
+#row2,
+#row3 {
+  position: absolute;
+  display: inline;
+  left: 32%;
+  top: 18.5rem;
+  transform: translateX(-50%);
+  height: 15rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+#row2 {
+  left: 50%;
+}
+#row3 {
+  left: 68%;
+}
+
+/* Ajustar imagen al tamaño de un contenedor */
+.row {
+  width: 150px;
+  height: 150px;
+  border: 14px solid #774936;
+  border-radius: 40px;
+}
+.row img {
+  width: 100%;
+  height: auto;
+}
+/* Imagenes de las jugadas en tabla de puntuación */
+#scoreImage {
+  width: 60px;
+  height: 60px;
+}
+
+/* Css para el historial desplegable (modal)*/
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 6rem;
+  border-radius: 40px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  overflow: auto;
+  border-style: solid;
+  border-width: 1rem;
+  border-color: #774936;
+}
+.modal p {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.modal h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Tablas de puntuación */
+.tableHead {
+  font-weight: 800;
+  font-size: 1.2em;
+  margin: auto;
+  text-align: center;
+  padding: 2.4em;
+}
+.container table,
+th,
+td {
+  margin: auto;
+  border-style: solid;
+  border-color: #774936;
+  background-color: #e6debd;
+}
+
+#modalCount,
+#modalCoins,
+#modalBalance {
+  margin: auto;
+  text-align: center;
+}

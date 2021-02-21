@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Maquina tragaduros</title>
+  </head>
+  <body>
+    <main>
+      <div class="head">
+        <h1>
+          Monedas : <span id="coins">0</span> Ganado : <span id="won">0</span>
+        </h1>
+      </div>
+      <!-- contenedores de las imágenes de las jugadas -->
+      <div>
+        <div class="row" id="row1">
+          <img id="imgLeft" width="200" height="200" />
+        </div>
+        <div class="row" id="row2">
+          <img id="imgCenter" width="200" height="200" />
+        </div>
+        <div class="row" id="row3">
+          <img id="imgRight" width="200" height="200" />
+        </div>
+      </div>
+      <!--Inicio de los botoenes y fin de zona imagenes-->
+      <div>
+        <button class="button insert">
+          <p>Meter moneda</p>
+        </button>
+        <button class="button play noButton">
+          <p>Jugar!</p>
+        </button>
+        <button class="button record noButton">
+          <p>Historial</p>
+        </button>
+        <button class="button finish">
+          <p>Salir</p>
+        </button>
+      </div>
+    </main>
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1>Historial de jugadas</h1>
+      <div class="container"></div>
+    </div>
+
+    <div class="overlay hidden"></div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
